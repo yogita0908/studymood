@@ -47,7 +47,8 @@ export default function Register() {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("http://localhost:5001/api/auth/register", formData);
+      await axios.post("https://studymood-7ynk.onrender.com/api/auth/register", formData);
+
       document.querySelector(".register-card").classList.add("success-animation");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {

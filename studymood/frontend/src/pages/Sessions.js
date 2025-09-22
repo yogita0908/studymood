@@ -236,7 +236,7 @@ export default function Sessions() {
     const fetchSessions = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:5001/api/sessions", {
+        const res = await axios.get("https://studymood-7ynk.onrender.com/api/sessions", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSessions(res.data);
@@ -285,7 +285,7 @@ export default function Sessions() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/sessions",
+        "https://studymood-7ynk.onrender.com/api/sessions",
         {
           focusScore: Number(focusScore),
           duration: duration,
